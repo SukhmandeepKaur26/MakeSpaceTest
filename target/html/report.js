@@ -1,9 +1,9 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Form.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("BookAppointment.feature");
 formatter.feature({
   "line": 2,
-  "name": "As a user, I want the contact form to display validation errors when I submit an empty form and with valid test data.",
+  "name": "As a user, I want to select desired plan, complete payment and book and appointment for pickup.",
   "description": "",
-  "id": "as-a-user,-i-want-the-contact-form-to-display-validation-errors-when-i-submit-an-empty-form-and-with-valid-test-data.",
+  "id": "as-a-user,-i-want-to-select-desired-plan,-complete-payment-and-book-and-appointment-for-pickup.",
   "keyword": "Feature",
   "tags": [
     {
@@ -12,118 +12,84 @@ formatter.feature({
     }
   ]
 });
-formatter.background({
+formatter.scenario({
   "line": 4,
-  "name": "",
+  "name": "Booking an appointment",
   "description": "",
-  "type": "background",
-  "keyword": "Background"
+  "id": "as-a-user,-i-want-to-select-desired-plan,-complete-payment-and-book-and-appointment-for-pickup.;booking-an-appointment",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
   "line": 5,
-  "name": "I have visited EQCare support page",
+  "name": "User has navigated to the application homepage",
   "keyword": "Given "
 });
-formatter.match({
-  "location": "Form.i_have_visited_EQCare_support_page()"
+formatter.step({
+  "line": 6,
+  "name": "enters his zip code to get pricing",
+  "keyword": "And "
 });
-formatter.result({
-  "duration": 17824392000,
-  "status": "passed"
+formatter.step({
+  "line": 7,
+  "name": "user gets naviagted to next screen to select desired plan and makespace bins",
+  "keyword": "When "
 });
-formatter.scenario({
+formatter.step({
   "line": 8,
-  "name": "Submit an empty support Form",
-  "description": "",
-  "id": "as-a-user,-i-want-the-contact-form-to-display-validation-errors-when-i-submit-an-empty-form-and-with-valid-test-data.;submit-an-empty-support-form",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 7,
-      "name": "@tag1"
-    }
-  ]
+  "name": "provides required details for pickup",
+  "keyword": "And "
 });
 formatter.step({
   "line": 9,
-  "name": "I click on submit without entering any data in the form",
-  "keyword": "When "
+  "name": "user should be navigated to final screen to enter address, appointment and payment details",
+  "keyword": "Then "
 });
 formatter.step({
   "line": 10,
-  "name": "proper validation errors should be displayed and user should be unable to submit the form.",
-  "keyword": "Then "
+  "name": "should be able to confirm and book appointment successfully.",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "Form.i_click_on_submit_without_entering_any_data_in_the_form()"
+  "location": "BookanAppointment.user_has_navigated_to_the_application_homepage()"
 });
 formatter.result({
-  "duration": 129065800,
+  "duration": 24707571299,
   "status": "passed"
 });
 formatter.match({
-  "location": "Form.proper_validation_errors_should_be_displayed_and_user_should_be_unable_to_submit_the_form()"
+  "location": "BookanAppointment.enters_his_zip_code_to_get_pricing()"
 });
 formatter.result({
-  "duration": 1207021600,
-  "status": "passed"
-});
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 5,
-  "name": "I have visited EQCare support page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "Form.i_have_visited_EQCare_support_page()"
-});
-formatter.result({
-  "duration": 18531689100,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 13,
-  "name": "Submit the support form with valid data",
-  "description": "",
-  "id": "as-a-user,-i-want-the-contact-form-to-display-validation-errors-when-i-submit-an-empty-form-and-with-valid-test-data.;submit-the-support-form-with-valid-data",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 12,
-      "name": "@tag2"
-    }
-  ]
-});
-formatter.step({
-  "line": 14,
-  "name": "I enter valid data values in all form fields",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 15,
-  "name": "User should be able to submit the form successfully.",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Form.i_enter_valid_data_values_in_all_form_fields()"
-});
-formatter.result({
-  "duration": 1103166900,
+  "duration": 436453200,
   "status": "passed"
 });
 formatter.match({
-  "location": "Form.user_should_be_able_to_submit_the_form_successfully()"
+  "location": "BookanAppointment.user_gets_naviagted_to_next_screen_to_select_desired_plan_and_makespace_bins()"
 });
 formatter.result({
-  "duration": 1267301600,
+  "duration": 9332978501,
   "status": "passed"
+});
+formatter.match({
+  "location": "BookanAppointment.provides_required_details_for_pickup()"
+});
+formatter.result({
+  "duration": 970311401,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BookanAppointment.user_should_be_navigated_to_final_screen_to_enter_address_appointment_and_payment_details()"
+});
+formatter.result({
+  "duration": 14013823499,
+  "error_message": "java.lang.NullPointerException\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\r\n\tat pageObjects.PageObjects.appointmentDateTime(PageObjects.java:177)\r\n\tat supportPage.BookanAppointment.user_should_be_navigated_to_final_screen_to_enter_address_appointment_and_payment_details(BookanAppointment.java:44)\r\n\tat ✽.Then user should be navigated to final screen to enter address, appointment and payment details(BookAppointment.feature:9)\r\n",
+  "status": "failed"
+});
+formatter.match({
+  "location": "BookanAppointment.should_be_able_to_confirm_and_book_appointment_successfully()"
+});
+formatter.result({
+  "status": "skipped"
 });
 });

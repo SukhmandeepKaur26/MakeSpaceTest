@@ -4,132 +4,92 @@
     "elements": [
       {
         "line": 4,
-        "name": "",
+        "name": "Booking an appointment",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 17824392000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "I have visited EQCare support page",
-            "match": {
-              "location": "Form.i_have_visited_EQCare_support_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 8,
-        "name": "Submit an empty support Form",
-        "description": "",
-        "id": "as-a-user,-i-want-the-contact-form-to-display-validation-errors-when-i-submit-an-empty-form-and-with-valid-test-data.;submit-an-empty-support-form",
+        "id": "as-a-user,-i-want-to-select-desired-plan,-complete-payment-and-book-and-appointment-for-pickup.;booking-an-appointment",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 129065800,
+              "duration": 24707571299,
               "status": "passed"
+            },
+            "line": 5,
+            "name": "User has navigated to the application homepage",
+            "match": {
+              "location": "BookanAppointment.user_has_navigated_to_the_application_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 436453200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "enters his zip code to get pricing",
+            "match": {
+              "location": "BookanAppointment.enters_his_zip_code_to_get_pricing()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9332978501,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user gets naviagted to next screen to select desired plan and makespace bins",
+            "match": {
+              "location": "BookanAppointment.user_gets_naviagted_to_next_screen_to_select_desired_plan_and_makespace_bins()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 970311401,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provides required details for pickup",
+            "match": {
+              "location": "BookanAppointment.provides_required_details_for_pickup()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14013823499,
+              "error_message": "java.lang.NullPointerException\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\r\n\tat pageObjects.PageObjects.appointmentDateTime(PageObjects.java:177)\r\n\tat supportPage.BookanAppointment.user_should_be_navigated_to_final_screen_to_enter_address_appointment_and_payment_details(BookanAppointment.java:44)\r\n\tat ✽.Then user should be navigated to final screen to enter address, appointment and payment details(BookAppointment.feature:9)\r\n",
+              "status": "failed"
             },
             "line": 9,
-            "name": "I click on submit without entering any data in the form",
+            "name": "user should be navigated to final screen to enter address, appointment and payment details",
             "match": {
-              "location": "Form.i_click_on_submit_without_entering_any_data_in_the_form()"
+              "location": "BookanAppointment.user_should_be_navigated_to_final_screen_to_enter_address_appointment_and_payment_details()"
             },
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1207021600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
-            "name": "proper validation errors should be displayed and user should be unable to submit the form.",
+            "name": "should be able to confirm and book appointment successfully.",
             "match": {
-              "location": "Form.proper_validation_errors_should_be_displayed_and_user_should_be_unable_to_submit_the_form()"
+              "location": "BookanAppointment.should_be_able_to_confirm_and_book_appointment_successfully()"
             },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 7,
-            "name": "@tag1"
-          }
-        ]
-      },
-      {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 18531689100,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "I have visited EQCare support page",
-            "match": {
-              "location": "Form.i_have_visited_EQCare_support_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 13,
-        "name": "Submit the support form with valid data",
-        "description": "",
-        "id": "as-a-user,-i-want-the-contact-form-to-display-validation-errors-when-i-submit-an-empty-form-and-with-valid-test-data.;submit-the-support-form-with-valid-data",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1103166900,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I enter valid data values in all form fields",
-            "match": {
-              "location": "Form.i_enter_valid_data_values_in_all_form_fields()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1267301600,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "User should be able to submit the form successfully.",
-            "match": {
-              "location": "Form.user_should_be_able_to_submit_the_form_successfully()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 12,
-            "name": "@tag2"
+            "keyword": "And "
           }
         ]
       }
     ],
-    "name": "As a user, I want the contact form to display validation errors when I submit an empty form and with valid test data.",
+    "name": "As a user, I want to select desired plan, complete payment and book and appointment for pickup.",
     "description": "",
-    "id": "as-a-user,-i-want-the-contact-form-to-display-validation-errors-when-i-submit-an-empty-form-and-with-valid-test-data.",
+    "id": "as-a-user,-i-want-to-select-desired-plan,-complete-payment-and-book-and-appointment-for-pickup.",
     "keyword": "Feature",
-    "uri": "Form.feature",
+    "uri": "BookAppointment.feature",
     "tags": [
       {
         "line": 1,
